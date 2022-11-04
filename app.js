@@ -64,6 +64,10 @@ window.onclick = function(event) {
     }
   }
 
+/////////////////////////
+//Project Button Link //
+///////////////////////
 
-
-
+function gotoLink(link) {
+    location.href = link.value;
+}
