@@ -13,12 +13,6 @@ aboutButton.onclick = function() {
 spanAbout.onclick = function() {
     modalAbout.style.display = "none";
   }
-// About Click Outside 
-window.onclick = function(event) {
-    if (event.target == modalAbout) {
-      modalAbout.style.display = "none";
-    }
-  }
 
 //////////////////////////
 //Resume Modal Section //
@@ -34,12 +28,6 @@ resumeButton.onclick = function() {
 // Resume Click [X]
 spanResume.onclick = function() {
     modalResume.style.display = "none";
-  }
-// Resume Click Outside 
-window.onclick = function(event) {
-    if (event.target == modalResume) {
-      modalResume.style.display = "none";
-    }
   }
 
 ////////////////////////
@@ -57,12 +45,7 @@ contactButton.onclick = function() {
 spanContact.onclick = function() {
     modalContact.style.display = "none";
   }
-// Contact Click Outside 
-window.onclick = function(event) {
-    if (event.target == modalContact) {
-      modalContact.style.display = "none";
-    }
-  }
+
 
 /////////////////////////
 //Project Button Link //
@@ -71,3 +54,26 @@ window.onclick = function(event) {
 function gotoLink(link) {
     location.href = link.value;
 }
+
+
+//Countdown 
+//From YT Channel: Easy Tutorials
+const countDown = new Date( "Jan 23, 2023 12:45:32" ).getTime();
+const x = setInterval(function(){
+  const now = new Date().getTime();
+  const distance = countDown - now;
+
+const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+const seconds =Math.floor((distance % (1000 * 60)) / 1000 );
+
+  document.getElementById("pjLaunch").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("pjLaunch").innerHTML = "OUT NOW"
+    }
+
+}, 1000);
+  
