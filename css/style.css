@@ -2,6 +2,8 @@
 
 
 #arcadeImage {
+    height: 70%;
+    width: 70%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -20,7 +22,7 @@
 }
 
 body {
-    background-color: #3aaafe;
+    background-color: #fdffd0;
     font-family: 'Josefin Sans', sans-serif;
 
 }
@@ -29,12 +31,12 @@ body {
 
 .btn {
     display: block;
-    display: grid;
-    margin: 30px auto;
+    display: grid;    
+    margin: 35px auto;
     max-width: 140px;
     padding: 0 50px;
     text-align: center;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Acme', sans-serif;
 
 
 }
@@ -80,10 +82,20 @@ body {
     text-decoration: none;
 }
 
-iframe {
-    height: 700px;
-    width: 500px;
-  }
+#contactImg {
+    height: 75%;
+    width: 80%;
+}
+
+.sLink {
+    color: grey;
+    display: block;
+    margin: 10%;
+}
+
+.sLink :hover {
+    color: black;
+}
                             /* Project Page */
 #pjBod header{
     background-position: center;
@@ -110,4 +122,6 @@ iframe {
  }
 
  
- 
+#HomeLink {
+    color: black;
+}

@@ -46,6 +46,21 @@ spanContact.onclick = function() {
     modalContact.style.display = "none";
   }
 
+/////////////////////////
+//  Social Buttons    //
+///////////////////////
+const modalSocial = document.getElementById('socialModal');
+const socialButton = document.getElementById('socialBtn');
+const spanSocial = document.getElementsByClassName("close")[3];
+
+// About Click Modal
+socialButton.onclick = function() {
+    modalSocial.style.display = "block";
+}
+// About Click [X]
+spanSocial.onclick = function() {
+    modalSocial.style.display = "none";
+  }
 
 /////////////////////////
 //Project Button Link //
@@ -57,23 +72,24 @@ function gotoLink(link) {
 
 
 //Countdown 
-//From YT Channel: Easy Tutorials
-const countDown = new Date( "Jan 23, 2023 12:45:32" ).getTime();
+// From YT Channel: Easy Tutorials
+const countDown = new Date( "Jan 23, 2023 15:45:32" ).getTime();
 const x = setInterval(function(){
   const now = new Date().getTime();
   const distance = countDown - now;
 
-const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-const seconds =Math.floor((distance % (1000 * 60)) / 1000 );
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds =Math.floor((distance % (1000 * 60)) / 1000 );
 
-  document.getElementById("pjLaunch").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+  document.getElementById("timer").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
 
     if (distance < 0) {
       clearInterval(x);
-      document.getElementById("pjLaunch").innerHTML = "OUT NOW"
+      document.getElementById("timer").innerHTML = "OUT NOW"
     }
 
 }, 1000);
-  
+
+/////////
